@@ -14,8 +14,8 @@ import java.util.*;
  * in the HashMap, the corresponding response is returned. If none of the input
  * words is recognized, one of the default responses is randomly chosen.
  * 
- * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
+ * @author Frederick Lamptey.
+ * @version 2022.12.02
  */
 public class Responder
 {
@@ -25,6 +25,7 @@ public class Responder
     private ArrayList<String> defaultResponses;
     // The name of the file containing the default responses.
     private static final String FILE_OF_DEFAULT_RESPONSES = "default.txt";
+    private static final String FILE_OF_RESPONSES = "responses.txt";
     private Random randomGenerator;
 
     /**
@@ -32,9 +33,10 @@ public class Responder
      */
     public Responder()
     {
-        responseMap = new HashMap<>();
+           responseMap = new HashMap<>();
         defaultResponses = new ArrayList<>();
-        fillResponseMap();
+        //fillResponseMap();
+        fillResponseMapFromFile();
         fillDefaultResponses();
         randomGenerator = new Random();
     }
@@ -67,7 +69,7 @@ public class Responder
      */
     private void fillResponseMap()
     {
-        responseMap.put("crash", 
+            responseMap.put("crash", 
                         "Well, it never crashes on our system. It must have something\n" +
                         "to do with your system. Tell me more about your configuration.");
         responseMap.put("crashes", 
@@ -115,6 +117,55 @@ public class Responder
                         "do about it, I'm afraid.");
     }
 
+      /**
+     * This method is reading from a txt file, the file is formatted with keys and values than runs 
+     * through checks to determine which value to set it's new value to based on a key.
+     */
+    public void fillResponseMapFromFile(){
+        String response = "";
+        String key = "";
+        String value = "";
+        Charset charset = Charset.forName("US-ASCII");
+        Path path = Paths.get(FILE_OF_RESPONSES);
+        try (BufferedReader reader = Files.newBufferedReader(path, charset)) {
+            key = reader.readLine();
+            while(key != null) {
+                
+                defaultResponses.add(response);
+                response = reader.readLine();
+                if(response == null){
+                    break;
+                }
+                else if(response.length() == 0){
+                    responseMap.put(key, value);
+                    value = "";
+                    //System.out.println(key + "++++++" + value);
+                    key = reader.readLine();
+                    if(key == null){
+                        break;
+                    }
+                    key = key.trim();
+                }
+                else{
+                    value += response.trim();
+                }
+                
+            }
+        }
+        catch(FileNotFoundException e) {
+            System.err.println("Unable to open " + FILE_OF_RESPONSES);
+        }
+        catch(IOException e) {
+            System.err.println("A problem was encountered reading " +
+                               FILE_OF_RESPONSES);
+        }
+        // Make sure we have at least one response.
+        if(defaultResponses.size() == 0) {
+            defaultResponses.add("Could you elaborate on that?");
+        }
+
+    }
+    
     /**
      * Build up a list of default responses from which we can pick
      * if we don't know what else to say.
