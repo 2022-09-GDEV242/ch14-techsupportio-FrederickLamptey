@@ -1,5 +1,5 @@
 import java.util.HashSet;
-
+import java.util.HashSet;
 /**
  * This class implements a technical support system.
  * It is the top level class in this project.
@@ -11,8 +11,8 @@ import java.util.HashSet;
  * It contains a loop that repeatedly reads input and generates
  * output until the users wants to leave.
  * 
- * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
+ * @author Frederick Lamptey.
+ * @version 2022.12.02
  */
 public class SupportSystem
 {
@@ -33,15 +33,20 @@ public class SupportSystem
      * into a dialog with the user, until the user ends the dialog.
      */
     public void start()
-    {
+     {
         boolean finished = false;
 
         printWelcome();
 
+        
+        
         while(!finished) {
             HashSet<String> input = reader.getInput();
 
-            if(input.contains("bye")) {
+            if(input.size() == 0){
+                System.out.println();
+            }
+            else if(input.contains("bye")) {
                 finished = true;
             }
             else {
