@@ -1,0 +1,54 @@
+crash,crashes
+                        Well, it never crashes on our system. It must have something
+                        to do with your system. Tell me more about your configuration.
+
+slow
+                        I this is a hardware problem. Upgrading your processor 
+                        should solve all performance problems. Do you ever get a problem with 
+                        our software?
+
+performance 
+                        Performance was quite adequate in all our tests. Are you running 
+                        any other processes in the background?
+
+bug 
+                        Well, you know, all software has some bugs. But our software engineers 
+                        are working very hard to fix them. Can you describe the problem a little 
+                        further?
+
+buggy 
+                        Well, you know, all software has some bugs. But our software engineers 
+                        are working very hard to fix them. Can you describe the problem a bit 
+                        further?
+
+windows 
+                        This is a known bug to do with the Windows operating system. Please 
+                        report it to Microsoft. We wish we could help with that.
+
+macintosh 
+                        This is a known bug to do with the Mac operating system. Please 
+                        report it to Apple. There is nothing we can do about this.
+
+expensive 
+                        The cost of our product is quite competitive. Have you looked around 
+                        and really compared our features?
+
+installation 
+                        The installation is really quite straight forward. We have tons of 
+                        wizards that do all the work for you. Have you read the installation 
+                        instructions?
+
+memory 
+                        If you read the system requirements carefully, you will see that the 
+                        specified memory requirements are 3GB giga byte. You should 
+                        upgrade your memory. Anything else you want to know?
+
+linux 
+                        We take Linux support very seriously. But there are some problems. 
+                        Most have to do with incompatible versions. Can you be a bit 
+                        more precise?
+
+bluej 
+                        It's a development environment that allows you to develop Java programs. And yeah
+                        it has a book to aid in understanding object oriented programming better in java. Try
+                        it out.
