@@ -40,7 +40,7 @@ installation
 
 memory 
                         If you read the system requirements carefully, you will see that the 
-                        specified memory requirements are 3GB giga byte. You should 
+                        specified memory requirements are 3 giga byte. You should 
                         upgrade your memory. Anything else you want to know?
 
 linux 

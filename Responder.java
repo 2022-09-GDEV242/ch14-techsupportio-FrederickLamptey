@@ -77,14 +77,14 @@ public class Responder
                         "to do with your system. Tell me more about your configuration.");
         responseMap.put("slow", 
                         "I think this has to do with your hardware. Upgrading your processor\n" +
-                        "should solve all performance problems. Have you got a problem with\n" +
+                        "should solve all performance problems. Do you ever get a problem with\n" +
                         "our software?");
         responseMap.put("performance", 
                         "Performance was quite adequate in all our tests. Are you running\n" +
                         "any other processes in the background?");
         responseMap.put("bug", 
                         "Well, you know, all software has some bugs. But our software engineers\n" +
-                        "are working very hard to fix them. Can you describe the problem a bit\n" +
+                        "are working very hard to fix them. Can you describe the problem a little\n" +
                         "further?");
         responseMap.put("buggy", 
                         "Well, you know, all software has some bugs. But our software engineers\n" +
@@ -92,7 +92,7 @@ public class Responder
                         "further?");
         responseMap.put("windows", 
                         "This is a known bug to do with the Windows operating system. Please\n" +
-                        "report it to Microsoft. There is nothing we can do about this.");
+                        "report it to Microsoft. We wish we could help with that.");
         responseMap.put("macintosh", 
                         "This is a known bug to do with the Mac operating system. Please\n" +
                         "report it to Apple. There is nothing we can do about this.");
@@ -105,16 +105,16 @@ public class Responder
                         "instructions?");
         responseMap.put("memory", 
                         "If you read the system requirements carefully, you will see that the\n" +
-                        "specified memory requirements are 1.5 giga byte. You really should\n" +
+                        "specified memory requirements are 3 giga byte. You really should\n" +
                         "upgrade your memory. Anything else you want to know?");
         responseMap.put("linux", 
                         "We take Linux support very seriously. But there are some problems.\n" +
                         "Most have to do with incompatible glibc versions. Can you be a bit\n" +
                         "more precise?");
         responseMap.put("bluej", 
-                        "Ahhh, BlueJ, yes. We tried to buy out those guys long ago, but\n" +
-                        "they simply won't sell... Stubborn people they are. Nothing we can\n" +
-                        "do about it, I'm afraid.");
+                        "It's a development environment that allows you to develop Java programs. And yeah\n" +
+                        "it has a book to aid in understanding object oriented programming better in java. Try\n" +
+                        "it out.");
     }
 
       /**
